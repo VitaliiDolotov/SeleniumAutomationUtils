@@ -10,8 +10,7 @@ namespace SeleniumAutomationUtils.Components
 
         string Identifier { get; set; }
 
-        // TODO Uncomment when logic will be implemented
-        // By Frame { get; }
+        By Frame { get; }
 
         WebDriverExtensions.WaitTime WaitTime { set; }
     }

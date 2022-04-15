@@ -117,6 +117,8 @@ namespace SeleniumAutomationUtils.Components
         private IWebElement Parent { get; set; }
 
         public By Context { get; }
+
+        public By Frame { get; }
     }
 
     public class Properties
