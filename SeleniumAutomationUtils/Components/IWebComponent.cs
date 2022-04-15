@@ -4,13 +4,11 @@ using WebDriverExtensions = SeleniumAutomationUtils.SeleniumExtensions.WebDriver
 
 namespace SeleniumAutomationUtils.Components
 {
-    public interface IWebComponent : IContextContainer
+    public interface IWebComponent : IContextContainer, IFrameContainer
     {
         WebDriver Driver { get; set; }
 
         string Identifier { get; set; }
-
-        By Frame { get; }
 
         WebDriverExtensions.WaitTime WaitTime { set; }
     }
