@@ -1,4 +1,13 @@
-﻿using System;
+﻿using AutomationUtils.Extensions;
+using Newtonsoft.Json;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
+using RestSharp;
+using SeleniumAutomationUtils.Components;
+using SeleniumAutomationUtils.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -6,14 +15,6 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading;
-using AutomationUtils.Extensions;
-using Newtonsoft.Json;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using RestSharp;
-using SeleniumAutomationUtils.Components;
-using SeleniumAutomationUtils.Pages;
 
 namespace SeleniumAutomationUtils.SeleniumExtensions
 {
@@ -3470,6 +3471,16 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
             {
                 throw new Exception("Unable to set clipboard");
             }
+        }
+
+        #endregion
+
+        #region Settings
+
+        private static void AllowFileDetection(this WebDriver driver)
+        {
+            IAllowsFileDetection allowsDetection = driver;
+            allowsDetection.FileDetector = new LocalFileDetector();
         }
 
         #endregion
