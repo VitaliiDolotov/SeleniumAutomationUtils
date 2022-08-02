@@ -1,10 +1,8 @@
-﻿using AutomationUtils.Extensions;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
-using RestSharp;
 using SeleniumAutomationUtils.Components;
 using SeleniumAutomationUtils.Pages;
 using System;
@@ -3477,7 +3475,7 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
 
         #region Settings
 
-        private static void AllowFileDetection(this WebDriver driver)
+        private static void AllowFileDetection(this RemoteWebDriver driver)
         {
             IAllowsFileDetection allowsDetection = driver;
             allowsDetection.FileDetector = new LocalFileDetector();
