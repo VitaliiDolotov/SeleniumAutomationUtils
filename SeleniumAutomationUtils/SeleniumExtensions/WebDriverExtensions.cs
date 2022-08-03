@@ -3477,7 +3477,7 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
 
         #region Settings
 
-        private static void AllowFileDetection(this WebDriver driver)
+        private static void AllowFileDetection(this RemoteWebDriver driver)
         {
             IAllowsFileDetection allowsDetection = driver;
             allowsDetection.FileDetector = new LocalFileDetector();
