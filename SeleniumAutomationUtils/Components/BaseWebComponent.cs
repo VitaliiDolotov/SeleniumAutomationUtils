@@ -21,7 +21,7 @@ namespace SeleniumAutomationUtils.Components
 
         public void Build()
         {
-            if (!(Props.ParentSelector is null) && !(Props.Parent is null))
+            if (Props.ParentSelector is not null && Props.Parent is not null)
             {
                 throw new Exception("Not allowed to use Parent element selector and Parent element together");
             }
@@ -119,21 +119,5 @@ namespace SeleniumAutomationUtils.Components
         public By Context { get; }
 
         public By Frame { get; }
-    }
-
-    public class Properties
-    {
-        public By ParentSelector = null;
-
-        public IWebElement Parent = null;
-
-        public TriState Displayed = TriState.True;
-
-        public TriState Exist = TriState.UseDefault;
-
-        public WebDriverExtensions.WaitTime WaitTime = WebDriverExtensions.WaitTime.Medium;
-
-        // Page factory will use Driver as context for factory
-        public bool InitWithoutContext = false;
     }
 }
