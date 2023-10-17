@@ -3511,7 +3511,7 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
             driver.FindElement(By.XPath(".//body"));
         }
         
-        public static void SetBrowserSize(this WebDriver driver, int width, int height)
+        public static void SetWindowSize(this WebDriver driver, int width, int height)
         {
             driver.Manage().Window.Size = new Size(width, height);
         }
