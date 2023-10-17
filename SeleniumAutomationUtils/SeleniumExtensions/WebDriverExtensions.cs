@@ -10,6 +10,7 @@ using SeleniumAutomationUtils.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -3508,6 +3509,16 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
         public static void PingDriver(this WebDriver driver)
         {
             driver.FindElement(By.XPath(".//body"));
+        }
+        
+        public static void SetWindowSize(this WebDriver driver, int width, int height)
+        {
+            if (width < 0 || height < 0)
+            {
+                throw new ArgumentException("Width and height must be non-negative values.");
+            }
+            
+            driver.Manage().Window.Size = new Size(width, height);
         }
 
         // For cases with _driver.FindBy
