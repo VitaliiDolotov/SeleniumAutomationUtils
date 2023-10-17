@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/VitaliiDolotov/SeleniumAutomationUtils</PackageProjectUrl>
     <PackageTags>Selenium SeleniumWebDriver WebUIAutomation TestAutomation</PackageTags>
     <Company>Techstack</Company>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
