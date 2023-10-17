@@ -3513,6 +3513,11 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
         
         public static void SetWindowSize(this WebDriver driver, int width, int height)
         {
+            if (width < 0 || height < 0)
+            {
+                throw new ArgumentException("Width and height must be non-negative values.");
+            }
+            
             driver.Manage().Window.Size = new Size(width, height);
         }
 
