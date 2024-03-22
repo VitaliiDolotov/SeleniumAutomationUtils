@@ -3447,7 +3447,7 @@ namespace SeleniumAutomationUtils.SeleniumExtensions
 
             RestClient client = new RestClient(hubUri.Replace("wd/hub", string.Empty));
             RestRequest restRequest = new RestRequest($"/clipboard/{sessionId}");
-            IRestResponse restResponse = client.Get(restRequest);
+            RestResponse restResponse = client.Get(restRequest);
 
             if (!restResponse.StatusCode.Equals(HttpStatusCode.OK))
             {
