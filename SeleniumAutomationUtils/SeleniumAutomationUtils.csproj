@@ -5,7 +5,7 @@
     <Description>Utils and extension methods for Selenium WebDriver based automation frameworks</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.10</Version>
+    <Version>1.0.11</Version>
     <Authors>Vitalii Dolotov</Authors>
     <Copyright>Copyright 2023 (c)</Copyright>
     <PackageProjectUrl>https://github.com/VitaliiDolotov/SeleniumAutomationUtils</PackageProjectUrl>
@@ -15,9 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutomationUtils" Version="1.1.93.1" />
+    <PackageReference Include="AutomationUtils" Version="1.1.93.2" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.0.1" />
-    <PackageReference Include="RestSharp" Version="108.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="Selenium.Support" Version="4.1.0" />
   </ItemGroup>
 
